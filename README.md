@@ -1,2 +1,7 @@
 # Dynamic_Scattered_Media
-This code is applied for Dynamic Scattered Media
+This code is applied for Dynamic Scattered Media.
+这个代码是基于C++和libtorch库完成的。代码中有一些需要说明的地方。
+这个项目由groundtruth_generate父类和DSM子类组成，groundtruth_generate父类模拟生成我们采集到的光场数据，DSM来根据论文的逻辑复现出光场和动态介质等效的空间频率滤波器。
+但是在复现时遇到一些问题。
+我们根据论文方法生成的动态介质嵌入到计算当中后，无法复现出论文中filter的效果，但是能复现出光场，按照梯度公式构建的Matlab代码也显示出这一点。
+因此，我们将动态介质直接等效地替换成一个空间频率滤波器来做。
